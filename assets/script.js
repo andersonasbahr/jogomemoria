@@ -14,7 +14,7 @@ function flipcard() {
 
     }
     secondCard = this;
-    hasFlipedCard = false
+    hasFlipedCard = false;
     checkforMatch();
 }
 
@@ -27,8 +27,8 @@ function checkforMatch(){
 }
 
 function disableCards(){
-    firstCard.removeEventListener('click',flipcard)
-    secondCard.removeEventListener('click', flipcard)
+    firstCard.removeEventListener('click',flipcard);
+    secondCard.removeEventListener('click', flipcard);
     resetBoard();
 }
 
@@ -49,13 +49,13 @@ function resetBoard(){
 (function shuffle(){
     cards.forEach((card) => {
     let randomPosition = Math.floor(Math.random() * 12) ;
-    cards.style.order = randomPosition;
+    card.style.order = randomPosition;
     });
 })();
 
 
 cards.forEach((card) => {
-    card.addEventListener('click', flipcard)
+    card.addEventListener('click', flipcard);
 })
 
 
